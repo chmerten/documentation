@@ -11,7 +11,7 @@ class block_documentation extends block_base {
         }
 
         $this->content         =  new stdClass;
-        $this->content->text   = 'The content of our Documentation block!';
+        $this->content->text   = '<a href="https://www.google.com">Google</a>';
         $this->content->footer = 'Footer here...';
 
         return $this->content;
