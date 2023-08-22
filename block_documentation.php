@@ -19,7 +19,7 @@ class block_documentation extends block_base {
 
         $course_list_text='';
         foreach ($course_list as $c) {
-            $course_list_text = $course_list_text . '<a href="https://www.google.com">'. $CFG->wwwroot . '</a>'
+            $course_list_text = $course_list_text . '<a href="https://www.google.com">'. $CFG->wwwroot . '</a>';
         }
 
 
