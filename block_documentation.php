@@ -21,7 +21,7 @@ class block_documentation extends block_base {
         foreach ($course_list as $course) {
             $course_url = $CFG->wwwroot . '/course/view.php?id=' . $course->id;
             //$course_list_text = $course_list_text . '<li>' . '<a href=\"' .  $course_url . '\">'. $course->fullname . '</a>' . '</li>';
-            $course_list_text = $course_list_text . '<li>' . $course->fullname . '</li>';
+            $course_list_text = $course_list_text . '<li>' . '<a href="http://10.128.0.15/moodle41/course/view.php?id=12">' . $course->fullname . '</a>' . '</li>';
         }
         $course_list_text = $course_list_text . '</ul>';
 
