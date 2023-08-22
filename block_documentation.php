@@ -17,10 +17,12 @@ class block_documentation extends block_base {
                         ORDER BY c.sortorder ASC";
         $course_list = $DB->get_records_sql_menu($sql, array('categoryidnumber' => 'TESTCM'));
 
-        $course_list_text='';
-        foreach ($course_list as $c) {
-            $course_list_text = $course_list_text . '<a href="https://www.google.com">'. $CFG->wwwroot . '</a>';
+        $course_list_text='<ul>';
+        foreach ($course_list as $course) {
+            $course_url = $CFG->wwwroot . '/course/view.php?id=' . $course->id;
+            $course_list_text = $course_list_text . '<li>' . '<a href="' .  $course_url . '">'. $course->fullname . '</a>' . '</li>';
         }
+        $course_list_text = $course_list_text . '</ul>'
 
 
         if ($this->content !== null) {
