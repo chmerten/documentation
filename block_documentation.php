@@ -22,7 +22,7 @@ class block_documentation extends block_base {
             $course_url = $CFG->wwwroot . '/course/view.php?id=' . $course->id;
             $course_list_text = $course_list_text . '<li>' . '<a href="' .  $course_url . '">'. $course->fullname . '</a>' . '</li>';
         }
-        $course_list_text = $course_list_text . '</ul>'
+        $course_list_text = $course_list_text . '</ul>';
 
 
         if ($this->content !== null) {
